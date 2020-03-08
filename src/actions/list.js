@@ -1,5 +1,5 @@
 import {
-    API_lIST
+    API_lIST, API_LIST_ITEM
 } from '../constants/api'
 import {
     LIST_INFO, LIST_ITEM
@@ -13,4 +13,8 @@ export const dispatchList = payload => createAction({
     payload
 })
 
-export const dispatchListById = payload => ({ type: LIST_ITEM, payload })
+export const dispatchListById = payload => createAction({
+    type: LIST_ITEM,
+    url: API_LIST_ITEM,
+    payload
+})

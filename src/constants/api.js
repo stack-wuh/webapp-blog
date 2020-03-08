@@ -3,3 +3,4 @@ export const host = HOST
 
 // LIST
 export const API_lIST = `${host}/articles`
+export const API_LIST_ITEM = `${host}/articles`

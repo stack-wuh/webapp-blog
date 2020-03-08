@@ -13,7 +13,7 @@ export default function list (state = INITIAL_STORE, action) {
         case LIST_ITEM: {
             return {
                 ...state,
-                info: state.data.find(item => item.id === action.payload.id)
+                info: action.payload.data[0] || {}
             }
         }
         default: return state

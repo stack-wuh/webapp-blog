@@ -28,7 +28,7 @@ class List extends Component {
         const { data } = this.props
         return (<View>
             {
-                data.map((item, _) => (<ListItem key={_} {...item} />))
+                data.map((item, _) => (<ListItem key={item._id} {...item} />))
             }
         </View>)
     }

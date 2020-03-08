@@ -1,0 +1,22 @@
+@import '../../styles/mixin.scss';
+@import '../../styles//theme.scss';
+
+.detail {
+    @include flex($align: center, $direction: column);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &__title {
+        font-size: 30px;
+    }
+    &__time {
+        font-size: 26px;
+        color: $text-color-light;
+    }
+    &__content {
+        align-self: flex-start;
+        font-size: 32px;
+    }
+}

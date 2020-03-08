@@ -2,9 +2,9 @@
   "miniprogramRoot": "./dist",
   "projectname": "webapp-blog",
   "description": "more complate for my website ",
-  "appid": "touristappid",
+  "appid": "wx92c27411485b8779",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "postcss": false,
     "minified": false
