@@ -88,4 +88,7 @@ class Music extends Taro.Component {
     }
 }
 
+Music.config = {
+    navigationBarTitleText: '音乐'
+}
 export default Music
