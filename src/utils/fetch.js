@@ -1,7 +1,6 @@
 import Taro from '@tarojs/taro'
 
 export default async function fetch (ops) {
-    console.log('this is ops: ', ops)
     const {
         url,
         payload,

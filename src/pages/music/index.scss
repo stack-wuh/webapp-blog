@@ -1,0 +1,44 @@
+@import '../../styles/mixin.scss';
+.music {
+    @include flex($direction: column, $justify: flex-start);
+    width: 100%;
+    height: 100%;
+    &__bg {
+        position: relative;
+        width: 80%;
+        padding-bottom: 80%;
+        margin: 20% auto 10px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+        }
+    }
+    &__progress {
+        width: 80%;
+        height: 40px;
+        margin: 20px auto;
+    }
+    &__contronls {
+        width: 80vw !important;
+        margin-left: 10vw !important;
+        margin-bottom: 40px !important;
+    }
+
+    .is-active {
+        animation: move_rotate 2s linear infinite;
+    }
+}
+
+@keyframes move_rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

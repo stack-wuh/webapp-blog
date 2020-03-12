@@ -45,3 +45,8 @@ page {
     flex: 1;
   }
   /*postcss-pxtransform rn eject disable*/
+
+  .flex-empty {
+    flex: 1;
+    visibility: hidden;
+  }
