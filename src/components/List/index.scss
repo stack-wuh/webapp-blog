@@ -1,0 +1,29 @@
+@import '../../styles/mixin.scss';
+.list {
+    width: inherit;
+    height: auto;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+
+    &__outer {
+        @include flex($align: center, $justify: space-around);
+        width: inherit;
+        height: inherit;
+        padding: 20px 20px;
+    }
+    &__outer:last-of-type {
+        border-bottom: none;
+    }
+
+    &__inner {
+        flex: 1;
+        font-size: 30px;
+    }
+    &__left,
+    &__right {
+        padding: 0 15px;
+        box-sizing: border-box;
+        word-break: keep-all;
+        font-size: 34px;
+    }
+}

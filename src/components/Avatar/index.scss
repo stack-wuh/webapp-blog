@@ -1,0 +1,13 @@
+@import '../../styles//mixin.scss';
+
+.avatar {
+    @include flex($align: center, $justify: center);
+    border-radius: 50%;
+    border: 1px solid #eee;
+    overflow: hidden;
+
+    &__image {
+        width: inherit;
+        height: inherit;
+    }
+}
