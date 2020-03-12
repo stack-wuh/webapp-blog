@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import PageLoading from '../../components/pageLoading'
+import PageLoading from '../../components/PageLoading'
 import ListItem from './ListItem'
 import { connect } from '@tarojs/redux'
 import * as actions from '../../actions/list'

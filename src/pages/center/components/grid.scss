@@ -1,0 +1,36 @@
+@import '../../../styles/mixin.scss';
+.c-grid {
+    @include flex($align: center, $wrap: wrap);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    &__item {
+        position: relative;
+        width: 33%;
+        height: 33%;
+        padding-bottom: 33%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        &--inner {
+            @include flex($align: center, $direction: column);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        &--icon {
+            font-size: 80px;
+        }
+        &--label {
+            font-size: 30px;
+        }
+    }
+    &__item:nth-child(n + 4) {
+        border-top: none;
+    }
+    &__item:nth-child(3n-1) {
+        border-left: none;
+        border-right: none;
+    }
+}

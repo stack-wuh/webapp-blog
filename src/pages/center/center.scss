@@ -1,0 +1,55 @@
+@import '../../styles/theme.scss';
+@import '../../styles/mixin.scss';
+
+.center {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    &__header {
+        @include flex($align: center, $justify: between);
+        width: 100%;
+        height: 240px;
+        padding: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 4px 4px #e9e9e9;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        &--user {
+            @include flex($direction: column);
+            flex:1;
+            margin-left: 15px;
+            font-size: 32px;
+            text:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__title {
+        width: 100%;
+        height: 30px;
+        padding: 20px 0;
+        line-height: 30px;
+        text-align: center;
+        z-index: 99;
+        font-size: 28px;
+        color: #ccc;
+
+        &::after {
+            content: '-------------';
+        }
+        &::before {
+            content: '-------------';
+        }
+    }
+}
+
+@keyframes avatar_move {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+}
