@@ -13,9 +13,9 @@ class Detail extends Taro.Component {
     }
     componentWillMount () {
         this.setState({ isLoading: true })
-        Taro.ShowNavigationBarLoading()
     }
     componentDidMount () {
+        Taro.showNavigationBarLoading()
         this.props.dispatchListById({_id: this.$router.params.id}).then(res => {
             const { data: [info] } = res
             this.setState({ isLoading: false })
@@ -31,7 +31,6 @@ class Detail extends Taro.Component {
             return (<PageLoading />)
         }
         return (<View className='detail'>
-            {/* <View className='detail__title'>{info.title}</View> */}
             <View className='detail__time'>{days.string}</View>
             <RichText className='detail__content' nodes={info.content}></RichText>
         </View>)
