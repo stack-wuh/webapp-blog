@@ -24,7 +24,8 @@ class App extends Component {
       'pages/list/list',
       'pages/music/music',
       'pages/center/center',
-      'pages/detail/detail'
+      'pages/detail/detail',
+      'pages/concat/concat'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -40,15 +41,21 @@ class App extends Component {
       list: [
         {
           text: '首页',
-          pagePath: 'pages/list/list'
+          pagePath: 'pages/list/list',
+          iconPath: './assets/tabbar/list-default.png',
+          selectedIconPath: './assets/tabbar/list-active.png'
         },
         {
           text: 'Music',
-          pagePath: 'pages/music/music'
+          pagePath: 'pages/music/music',
+          iconPath: './assets/tabbar/music-default.png',
+          selectedIconPath: './assets/tabbar/music-active.png'
         },
         {
           text: '关于',
-          pagePath: 'pages/center/center'
+          pagePath: 'pages/center/center',
+          iconPath: './assets/tabbar/center-default.png',
+          selectedIconPath: './assets/tabbar/center-active.png'
         }
       ]
     }

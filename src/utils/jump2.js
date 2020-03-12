@@ -28,7 +28,7 @@ export default function jump(options) {
   }
 }
 
-function urlStringify(url, payload, encode = true) {
+export function urlStringify(url, payload, encode = true) {
   const arr = Object.keys(payload).map(key =>
     `${key}=${encode ? encodeURIComponent(payload[key]) : payload[key]}`
   )

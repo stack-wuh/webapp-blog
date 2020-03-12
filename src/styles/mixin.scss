@@ -1,13 +1,15 @@
 $align: flex-start;
 $justify: flex-start;
 $direction: row;
+$wrap: nowrap;
 
 /** flex 布局 **/
-@mixin flex ($align: $align, $justify: $justify, $direction: $direction) {
+@mixin flex ($align: $align, $justify: $justify, $direction: $direction, $wrap: $wrap) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-direction: $direction;
+    flex-wrap: $wrap;
 }
 
 /**
