@@ -22,10 +22,11 @@ class App extends Component {
   config = {
     pages: [
       'pages/list/list',
-      'pages/music/music',
+      // 'pages/music/music',
       'pages/center/center',
       'pages/detail/detail',
-      'pages/concat/concat'
+      'pages/concat/concat',
+      'pages/web-view/web-view'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -45,12 +46,12 @@ class App extends Component {
           iconPath: './assets/tabbar/list-default.png',
           selectedIconPath: './assets/tabbar/list-active.png'
         },
-        {
-          text: 'Music',
-          pagePath: 'pages/music/music',
-          iconPath: './assets/tabbar/music-default.png',
-          selectedIconPath: './assets/tabbar/music-active.png'
-        },
+        // {
+        //   text: 'Music',
+        //   pagePath: 'pages/music/music',
+        //   iconPath: './assets/tabbar/music-default.png',
+        //   selectedIconPath: './assets/tabbar/music-active.png'
+        // },
         {
           text: '关于',
           pagePath: 'pages/center/center',
