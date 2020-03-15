@@ -9,11 +9,13 @@ import { urlStringify } from '../../utils/jump2'
 const Likes = [
     {
         label: '知乎',
-        icon: 'icon-zhihu'
+        icon: 'icon-zhihu',
+        url: 'https://www.zhihu.com/people/mei-you-chuan-de-hai-zei-wang'
     },
     {
         label: 'Github',
-        icon: 'icon-github'
+        icon: 'icon-github',
+        url: 'https://github.com/stack-wuh'
     },
     {
         label: 'Bilibili',
@@ -86,8 +88,9 @@ class Center extends Taro.Component {
     static config = {
         navigationBarTitleText: '个人中心'
     }
-    handleLikeClick = (item, index) => {
-        console.log(item, index)
+    handleLikeClick = (item) => {
+        const { url } = item
+        Taro.setClipboardData({ data: url })
     }
     handleJump = (item) => {
         const { url, query } = item
