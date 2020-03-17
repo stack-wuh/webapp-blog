@@ -22,6 +22,10 @@ const Links = [
     {
         label: '163',
         value: 'wuh_201314@163.com'
+    },
+    {
+        label: 'Gmail',
+        value: 'wuh131420@gmail.com'
     }
 ]
 const NormalConcat = () => {
