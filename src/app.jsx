@@ -21,7 +21,8 @@ class App extends Component {
   // eslint-disable-next-line react/sort-comp
   config = {
     pages: [
-      'pages/list/list',
+      'pages/index/index',
+      // 'pages/list/list',
       // 'pages/music/music',
       'pages/center/center',
       'pages/detail/detail',
@@ -42,7 +43,7 @@ class App extends Component {
       list: [
         {
           text: '首页',
-          pagePath: 'pages/list/list',
+          pagePath: 'pages/index/index',
           iconPath: './assets/tabbar/list-default.png',
           selectedIconPath: './assets/tabbar/list-active.png'
         },
