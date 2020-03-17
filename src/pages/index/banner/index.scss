@@ -1,0 +1,29 @@
+.banner {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+
+    &__swiper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--item {
+            position: relative;
+            width: inherit;
+            height: inherit;
+            background-color: #fafafa;
+            overflow: hidden;
+            &-img {
+                width: 630px;
+                height: 340px;
+            }
+            &-text {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}
