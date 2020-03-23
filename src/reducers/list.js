@@ -1,8 +1,9 @@
-import { LIST_INFO, LIST_ITEM } from '../constants/list'
+import { LIST_INFO, LIST_ITEM, lIST_BANNER } from '../constants/list'
 
 const INITIAL_STORE = {
     data: [],
-    info: {}
+    info: {},
+    banner: []
 }
 
 export default function list (state = INITIAL_STORE, action) {
@@ -14,6 +15,12 @@ export default function list (state = INITIAL_STORE, action) {
             return {
                 ...state,
                 info: action.payload.data[0] || {}
+            }
+        }
+        case lIST_BANNER: {
+            return {
+                ...state,
+                banner: action.payload.data
             }
         }
         default: return state
