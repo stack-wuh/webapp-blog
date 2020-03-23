@@ -4,6 +4,8 @@ import qqQrcode from './assets/qq.jpeg'
 import wechatQrCode from './assets/wechat.jpeg'
 import './index.scss'
 import ListWrapper from '../../components/List'
+import PageLoading from '../../components/PageLoading'
+import Curtian from '../../components/Curtian'
 
 const Maps = {
     qq: qqQrcode,
@@ -41,6 +43,7 @@ const NormalConcat = () => {
     }
     if (mode === 'email') {
         return (<View className='concat'>
+            {/* <Curtian layout='top center' isVisible></Curtian> */}
             {
                 Links.map(v => (<ListWrapper key={v.label}>
                     <Text onClick={() => handleClip(v.value)}>{v.label}: {v.value}</Text>
@@ -49,7 +52,11 @@ const NormalConcat = () => {
         </View>)
     }
     return (<View className='concat'>
-        <Image mode='widthFix' src={Maps[mode]}></Image>
+        {
+            Maps[mode] ? <Image mode='widthFix' src={Maps[mode]}></Image>
+                : <PageLoading />
+        }
+         {/* <Image mode='widthFix' src={Maps[mode]}></Image> */}
     </View>)
 }
 

@@ -4,7 +4,8 @@ import './center.scss'
 import Avatar from '../../components/Avatar'
 import Throught from '../../components/Throught'
 import ListItem from './components/grid'
-import { urlStringify } from '../../utils/jump2'
+import CusMap from './components/Map'
+import jump2, { urlStringify } from '../../utils/jump2'
 
 const Likes = [
     {
@@ -88,9 +89,12 @@ class Center extends Taro.Component {
     static config = {
         navigationBarTitleText: '个人中心'
     }
-    handleLikeClick = (item) => {
-        const { url } = item
-        Taro.setClipboardData({ data: url })
+    /**
+     * 个人版小程序不可以使用webview
+     */
+    handleLikeClick = () => {
+        // const { url } = item
+        jump2({ url: '/pages/schema/empty/empty' })
     }
     handleJump = (item) => {
         const { url, query } = item
@@ -117,6 +121,10 @@ class Center extends Taro.Component {
             {/* 如何联系 */}
             <Throught text='如何联系' pos='center' width='80%' />
             <ListItem onClick={this.handleJump} data={Maps} />
+
+            {/* 我的位置 */}
+            <Throught text='我的位置' pos='center' width='80%' />
+            <CusMap />
         </View>)
     }
 }

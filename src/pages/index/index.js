@@ -9,6 +9,7 @@ import PageLoading from '../../components/PageLoading'
 import List from './list'
 import './index.scss'
 import * as actions from '../../actions/list'
+import jump2 from '../../utils/jump2'
 
 @connect(state => state.list, {...actions})
 class Index extends Taro.Component {
@@ -27,12 +28,19 @@ class Index extends Taro.Component {
             this.setState({isLoading: false})
             Taro.hideNavigationBarLoading()
         })
+
+        this.props.dispatchBanner()
+    }
+
+    handleJump2 = ({art_id: id}) => {
+        jump2({url: '/pages/detail/detail', payload: { id }})
     }
 
     render () {
         const { isLoading } = this.state
+        const { banner } = this.props
         return (<View className='feature'>
-            <Banner />
+            <Banner onClick={this.handleJump2} list={banner} />
 
             {/* <Throught text='最近足迹' />
             <Feature /> */}

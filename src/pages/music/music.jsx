@@ -12,6 +12,10 @@ const bgStyle = {
     backgroundPosition: 'center center',
 }
 
+/**
+ * 个人版小程序不支持Audio播放
+ * 我丢~~
+ */
 class Music extends Taro.Component {
 
     state = {
