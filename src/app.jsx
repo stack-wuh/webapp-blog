@@ -27,7 +27,8 @@ class App extends Component {
       'pages/center/center',
       'pages/detail/detail',
       'pages/concat/concat',
-      'pages/web-view/web-view'
+      'pages/web-view/web-view',
+      'pages/schema/empty/empty'
     ],
     window: {
       backgroundTextStyle: 'light',

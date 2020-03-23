@@ -32,6 +32,10 @@ const config = {
     ]
   },
   defineConstants: {
+    Position: {
+      longitude: 113.857232,
+      latitude: 22.581004
+    }
   },
   mini: {
     postcss: {

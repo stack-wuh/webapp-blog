@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
 
-const PAGE_WEBVIEW = '/pages/webview/webview'
+const PAGE_WEBVIEW = '/pages/web-view/web-view'
 
 /**
  * // NOTE 后端返回的 url 可能是网页链接，需要在 webview 中打开
