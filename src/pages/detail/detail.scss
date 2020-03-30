@@ -18,5 +18,8 @@
     &__content {
         align-self: flex-start;
         font-size: 32px;
+        &--img {
+            border: 1px solid red;
+        }
     }
 }

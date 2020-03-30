@@ -27,12 +27,13 @@ class Detail extends Taro.Component {
         const { info = {} } = this.props
         const days = new Days(info.update_at)
         const { isLoading } = this.state
+        let html = info && info.content && info.content.replace(/\<img/ig, '<img className="detail__content--img" style="width: auto; max-width: 100%;"')
         if (isLoading) {
             return (<PageLoading />)
         }
         return (<View className='detail'>
             <View className='detail__time'>{days.string}</View>
-            <RichText className='detail__content' nodes={info.content}></RichText>
+            <RichText className='detail__content' nodes={html}></RichText>
         </View>)
     }
 }
