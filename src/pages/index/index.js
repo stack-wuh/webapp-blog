@@ -11,6 +11,10 @@ import './index.scss'
 import * as actions from '../../actions/list'
 import jump2 from '../../utils/jump2'
 
+import { AtNoticebar } from 'taro-ui'
+import 'taro-ui/dist/style/components/noticebar.scss'
+import 'taro-ui/dist/style/components/icon.scss'
+
 @connect(state => state.list, {...actions})
 class Index extends Taro.Component {
     static config = {
@@ -40,6 +44,7 @@ class Index extends Taro.Component {
         const { isLoading } = this.state
         const { banner } = this.props
         return (<View className='feature'>
+            <AtNoticebar icon='volume-plus' single marquee>第一版小程序上线啦, 现在终于有一个简易版本啦, 可以有一个更改的基础小程序啦!</AtNoticebar>
             <Banner onClick={this.handleJump2} list={banner} />
 
             {/* <Throught text='最近足迹' />
